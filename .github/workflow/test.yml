@@ -1,0 +1,9 @@
+name: Container testailu
+on: workflow_dipatch
+
+jobs:
+ container-job:
+  runs-on: ubuntu-latest
+  container: node:22.23.3-alpine
+  steps:
+    - run: node --version
