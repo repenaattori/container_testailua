@@ -1,5 +1,8 @@
 name: kertaus
-on: issues
+on: workflow_dispatch
+permissions: 
+  contents: write
+
 env:
   MYNAME: Reima
   EVENT_NAME: ${{github.event_name}}
@@ -14,9 +17,13 @@ jobs:
           echo "My env event $EVENT_NAME
           echo "Event detail ${{github.event.action}}"
       - name: EhdollinenEka
-        if: ${{github.event.action == 'opened'}}
+        if: ${{github.event.action == 'sadfa'}}
         run: echo "Avattiin uusi issue" 
-      - name: Oma ehto
-        if: ${{env.EVENT_NAME == 'issue'}}
-        run: echo "Hoblaa"
+      - name: Gitpush
+        run: |
+          git config --global user.name 'repenaattori'
+          git config --global user.email 'reimarii@oamk.fi'
+          git add .
+          git commit -m 'update'
+          git push
           
