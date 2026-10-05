@@ -16,6 +16,6 @@ jobs:
           git config --global user.name 'repenaattori'
           git config --global user.email 'reimarii@oamk.fi'
           git add .
-          git commit -m 'update'
+          git commit -m 'update' || true
           git push
           
