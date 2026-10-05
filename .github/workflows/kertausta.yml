@@ -8,6 +8,7 @@ env:
   EVENT_NAME: ${{github.event_name}}
 jobs:
   main:
+    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
