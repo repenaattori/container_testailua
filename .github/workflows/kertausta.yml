@@ -6,7 +6,6 @@ env:
 jobs:
   main:
     runs-on: ubuntu-latest
-  
     steps:
       - run: |
           echo "$MYNAME"
@@ -14,3 +13,7 @@ jobs:
           echo "Context event ${{github.event_name}}"
           echo "My env event $EVENT_NAME
           echo "Event detail ${{github.event.action}}"
+      - name: EhdollinenEka
+        if: ${{github.event.action == 'opened'}}
+        run: echo "Avattiin uusi issue" 
+          
