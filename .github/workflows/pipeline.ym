@@ -1,0 +1,10 @@
+name: pipeline
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  eka:
+    uses: './.github/workflows/kertausta.yml'
+  toka:
+    uses: './.github/workflows/test.yml'
+    needs: eka
