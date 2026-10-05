@@ -13,3 +13,4 @@ jobs:
           echo "Github event $GITHUB_EVENT_NAME
           echo "Context event ${{github.event_name}}"
           echo "My env event $EVENT_NAME
+          echo "Event detail ${{github.event.action}}"
