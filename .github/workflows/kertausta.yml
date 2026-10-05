@@ -16,4 +16,7 @@ jobs:
       - name: EhdollinenEka
         if: ${{github.event.action == 'opened'}}
         run: echo "Avattiin uusi issue" 
+      - name: Oma ehto
+        if: ${{env.EVENT_NAME == 'issue'}}
+        run: echo "Hoblaa"
           
