@@ -1,0 +1,15 @@
+name: kertaus
+on: issues
+env:
+  MYNAME: Reima
+  EVENT_NAME: ${{github.event_name}}
+jobs:
+  main:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - run: |
+          echo "$MYNAME"
+          echo "Github event $GITHUB_EVENT_NAME
+          echo "Context event ${{github.event_name}}"
+          echo "My env event $EVENT_NAME
