@@ -10,15 +10,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "$MYNAME"
-          echo "Github event $GITHUB_EVENT_NAME
-          echo "Context event ${{github.event_name}}"
-          echo "My env event $EVENT_NAME
-          echo "Event detail ${{github.event.action}}"
-      - name: EhdollinenEka
-        if: ${{github.event.action == 'sadfa'}}
-        run: echo "Avattiin uusi issue" 
+      - uses: actions/checkout@v7
       - name: Gitpush
         run: |
           git config --global user.name 'repenaattori'
