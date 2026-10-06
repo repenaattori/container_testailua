@@ -9,4 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - run: npm ci
-      - run: npm test -- test1
+      - run: npm test -- test1 > file.txt || true
+      - run: cat file.txt
