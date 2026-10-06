@@ -1,4 +1,6 @@
+name: Kokeilu
 on: workflow_dispatch
+
 
 jobs:
   eka:
