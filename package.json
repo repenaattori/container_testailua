@@ -25,9 +25,13 @@
   "contributors": [],
   "scripts": {
     "dev": "",
-    "test": ""
+    "test": "playwright test"
   },
   "dependencies": {
-    "pg": "^8.23.1"
+    "playwright": "^1.63.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4"
   }
 }
