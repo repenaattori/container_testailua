@@ -1,3 +1,3 @@
 ## Tehtävä
 
-** Tee eka
+* Tee eka
