@@ -16,6 +16,6 @@ jobs:
         if: failure() || success()
         run: |
           git config --global user.email 'reimarii@oamk.fi'
-          git add testi1.txt testi2.txt
+          git add .
           git commit -m 'tests' || true
           git push
