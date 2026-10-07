@@ -1,0 +1,17 @@
+name: Container testailu
+on: workflow_dispatch
+
+jobs:
+ container-job:
+  runs-on: ubuntu-latest
+  container: node:22.23.3-alpine
+  services:
+    postgres:
+     image: postgres
+     env:
+      POSTGRES_PASSWORD: postgres
+  steps:
+    - uses: actions/checkout@v7
+    - run: |
+       npm ci
+       node code.js
