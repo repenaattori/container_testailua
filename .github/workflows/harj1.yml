@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright:v1.63.0-noble
     steps:
+      - uses: actions/checkout@v7
       - run: |
           npm ci
           npm test -- test1 > testi1.txt || true
