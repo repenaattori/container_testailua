@@ -15,6 +15,7 @@ jobs:
       - name: Push
         if: failure() || success()
         run: |
+          git config --global user.name 'repenaattori'
           git config --global user.email 'reimarii@oamk.fi'
           git add .
           git commit -m 'tests' || true
