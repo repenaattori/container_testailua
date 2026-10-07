@@ -4,7 +4,7 @@ test("Testataan tehtävän 1 tyylit", async ({ page }) => {
   await page.goto(`file://${process.cwd()}/index.html`);
   await page.setViewportSize({ width: 1000, height: 1000 });
 
-  let e =  page.locator('h1');
+  let e =  page.locator('p');
 
   expect(e).toHaveText(/basic/);
 
