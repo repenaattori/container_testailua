@@ -19,5 +19,5 @@ jobs:
       - uses: actions/download-artifact@v7
         with:
           name: loggaus
-      - run: touch log.txt
+      - run: cat log.txt
           
