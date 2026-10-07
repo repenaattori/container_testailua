@@ -1,0 +1,26 @@
+
+> test
+> playwright test test1
+
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit (4ms)
+
+
+  1) [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit ────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/test1-Testataan-tehtävän-1-tyylit-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit ─────────────────────────────
