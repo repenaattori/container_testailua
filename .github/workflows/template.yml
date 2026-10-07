@@ -1,13 +1,1 @@
-name: Kokeilu
-on: workflow_dispatch
 
-
-jobs:
-  eka:
-    runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright:v1.63.0-noble
-    steps:
-      - uses: actions/checkout@v7
-      - run: npm ci
-      - run: npm test -- test1 > file.txt || true
-      - run: cat file.txt
