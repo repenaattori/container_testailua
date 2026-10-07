@@ -1,0 +1,18 @@
+name: Harj1
+on: workflow_dispatch
+permissions: 
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.63.0-noble
+    steps:
+      - uses: actions/checkout@v7
+      - run: |
+          npm ci
+          npm test -- test1 > testi1.md || true
+      - run: npm test -- test2 > testi2.md
+      - uses: actions/upload-artifact@v7
+        with:
+          path: ./*.md
