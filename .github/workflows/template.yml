@@ -1,13 +1,14 @@
 name: Koe
 on: workflow_dispatch
-permissions: 
-  contents: write
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
       - run: |
-          chmod +x ./worker.sh
-          ./worker.sh
+          touch log.txt
+          echo "Some errors..." > log.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          path: ./log.txt
+    
