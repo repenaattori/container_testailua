@@ -6,9 +6,10 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright:v1.63.0-noble
     steps:
       - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+      - run: npx playwright install --only-shell chromium
       - run: |
           npm ci
           npm test -- test1 > testi1.md || true
