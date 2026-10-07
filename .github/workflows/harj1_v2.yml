@@ -14,5 +14,6 @@ jobs:
           npm test -- test1 > testi1.md || true
       - run: npm test -- test2 > testi2.md
       - uses: actions/upload-artifact@v7
+        if: failure()
         with:
           path: ./*.md
