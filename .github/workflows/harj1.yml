@@ -1,0 +1,22 @@
+name: Harj1
+on: workflow_dispatch
+permissions: 
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.63.0-noble
+    steps:
+      - run: |
+          npm ci
+          npm test -- test1 > testi1.txt || true
+      - run: npm test -- test2 > testi2.txt
+      - name: Push
+        if: failure() || success()
+        run: |
+          git config user.email 'reimarii@oamk.fi'
+          git config user.name 'repenaattori'
+          git add .
+          git commit -m 'tests' || true
+          git push
