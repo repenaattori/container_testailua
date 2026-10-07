@@ -14,3 +14,6 @@
  Tee workflow, joka käynnistyy push-eventillä. 
  * Jos push tehdään main-haaraan, tulostetaan "Push into productions"
  * Muussa tapauksessa tulostetaan haaran nimi
+
+## Tehtävä 3
+Talleta tehvän 1 testitulokset artifactiin.
