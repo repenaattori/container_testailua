@@ -13,6 +13,7 @@ jobs:
           name: loggaus
           path: ./log.txt
   anotherjob:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v7
