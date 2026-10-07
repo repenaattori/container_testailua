@@ -5,10 +5,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v7
       - run: |
-          touch log.txt
-          echo "Some errors..." > log.txt
+          touch ./tests/uusi.txt
       - uses: actions/upload-artifact@v7
         with:
-          path: ./log.txt
+          path: |
+            ./tests
+            package.json
     
