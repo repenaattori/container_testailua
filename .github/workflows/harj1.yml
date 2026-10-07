@@ -18,6 +18,6 @@ jobs:
         run: |
           git config --global user.name 'repenaattori'
           git config --global user.email 'reimarii@oamk.fi'
-          git add .
+          git add testi1.txt testi2.txt
           git commit -m 'tests' || true
           git push
