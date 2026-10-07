@@ -6,6 +6,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.63.0-noble
     steps:
       - uses: actions/checkout@v4
       - run: |
@@ -15,6 +16,7 @@ jobs:
       - name: Push
         if: failure() || success()
         run: |
+          git config --global --add safe.directory '.'
           git config --global user.name 'repenaattori'
           git config --global user.email 'reimarii@oamk.fi'
           git add .
