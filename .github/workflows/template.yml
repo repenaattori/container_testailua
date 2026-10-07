@@ -5,12 +5,18 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
       - run: |
-          touch ./tests/uusi.txt
+          touch log.txt
+          echo "Hello world!!" > log.txt
       - uses: actions/upload-artifact@v7
         with:
-          path: |
-            ./tests
-            package.json
-    
+          name: loggaus
+          path: ./log.txt
+  anotherjob:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: loggaus
+      - run: touch log.txt
+          
